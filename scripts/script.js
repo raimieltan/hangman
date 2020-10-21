@@ -32,7 +32,7 @@ window.onload = function () {
 
     
         for(let i = 0; i < words[randomIndex].length; i++){
-            blankArray.push('___ ')
+            blankArray.push('─────── &nbsp')
         }
     
     function displayBlanks(array){
@@ -74,11 +74,16 @@ window.onload = function () {
             if(! (words[randomIndex].includes(guessedLetter) )){
                 console.log('test')
                 lives -= 1
-                livesH1.innerHTML = lives + " guesses left"
 
                 if(lives < 1){
+                    lives = 0
                     result.innerHTML = 'You lost'
+                    
                 }
+
+                livesH1.innerHTML = lives + " guesses left"
+
+               
             }
             else{
                 guessedArray.push(guessedLetter)
@@ -133,10 +138,10 @@ window.onload = function () {
         let guess = document.querySelector('#guess')
         let livesH1 = document.querySelector('#lives')
 
-        setTimeout(function(){ 
-            location.reload()
-            alert("Times Up"); 
-        }, 30000);
+        // setTimeout(function(){ 
+        //     location.reload()
+        //     alert("Times Up"); 
+        // }, 30000);
         
         
   
