@@ -32,7 +32,7 @@ window.onload = function () {
 
     
         for(let i = 0; i < words[randomIndex].length; i++){
-            blankArray.push('─────── &nbsp')
+            blankArray.push('─ &nbsp')
         }
     
     function displayBlanks(array){
