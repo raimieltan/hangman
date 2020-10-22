@@ -32,3 +32,26 @@ button {
 button:hover {
   background-color: gray;
 }
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+@media screen and (min-width: 480px) {
+  .information{
+      flex-direction: row;
+  }
+  .guesses {
+    flex: 2;
+  }
+  
+  .timeLeft{
+    flex: 2;
+  }
+
+}

@@ -9,15 +9,31 @@
 <body>
     <div id="main">
         <h1>Bootleg Hangman</h1>
-        <p>You have 30 seconds to answer</p>
+
+        <div class="information">
+
+            <div class="guesses">
+                <h2 id="lives">10 guesses left</h2>
+            </div>
+            
+            <div class="timeLeft">
+                <h2 id ="timer">Time: 30 seconds</h2>
+            </div>
+            
+
+        </div>
+
+        
         <img src="https://thumbs.gfycat.com/OffensiveSpitefulFruitbat-small.gif" width="200px" height="200px" alt="hangman">
         <h1 id="blanks"></h1>
         <div id='buttons'></div>
        
         
     
-        <h1 id="lives">10 guesses left</h1>
-        <h1 id='result'></h1>
+
+        
+
+     
     </div>
  
     <script src="./scripts/script.js"></script>

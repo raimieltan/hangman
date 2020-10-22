@@ -77,7 +77,8 @@ window.onload = function () {
 
                 if(lives < 1){
                     lives = 0
-                    result.innerHTML = 'You lost'
+                    alert('Game over!')
+                    location.reload()
                     
                 }
 
@@ -109,9 +110,8 @@ window.onload = function () {
                 guessedArray.sort()
                 if(guessedArray.length == sortedWord.length ){
                     if(arrayEqualCheck(guessedArray, sortedWord)){
-                        result.innerHTML = 'You Win'
                         alert('Congratulations')
-                        location.reload
+                        location.reload()
                     }
                 
                 }
@@ -140,10 +140,18 @@ window.onload = function () {
         let guess = document.querySelector('#guess')
         let livesH1 = document.querySelector('#lives')
 
-        // setTimeout(function(){ 
-        //     location.reload()
-        //     alert("Times Up"); 
-        // }, 30000);
+        let time = 30
+       function timer (){
+           if(time < 1){
+               alert('Game over!')
+               location.reload()
+           }
+           time --
+           document.querySelector('#timer').innerHTML = `You have ${time} seconds to answer`
+
+       }
+
+    //    setInterval(timer, 1000)
         
         
   
