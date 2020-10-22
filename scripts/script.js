@@ -62,7 +62,7 @@ window.onload = function () {
             let key = document.querySelector(`#${alphabet[i]}`)
             key.onclick = function (){ 
                 guessedLetter = key.innerHTML
-                // guess.innerHTML = guessedLetter
+                key.disabled = true
 
                 checker(guessedLetter, key)
                 
@@ -106,7 +106,7 @@ window.onload = function () {
                 }
                 
                 
-                key.disabled = true
+                
                 guessedArray.sort()
                 if(guessedArray.length == sortedWord.length ){
                     if(arrayEqualCheck(guessedArray, sortedWord)){
@@ -136,11 +136,9 @@ window.onload = function () {
             return indices
         }
 
-        let result = document.querySelector('#result')
-        let guess = document.querySelector('#guess')
         let livesH1 = document.querySelector('#lives')
 
-        let time = 30
+        let time = 120
        function timer (){
            if(time < 1){
                alert('Game over!')
@@ -151,7 +149,7 @@ window.onload = function () {
 
        }
 
-    //    setInterval(timer, 1000)
+       setInterval(timer, 1000)
         
         
   
